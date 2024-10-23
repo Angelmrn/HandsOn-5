@@ -8,7 +8,8 @@ public class Main {
         Data.ObtenerDatos30();
         Data.ObtenersegDatos30();
         Data.ObtenersegDatos70();
-        int grado = 2;
+
+        int grado = 1;
 
         Modelo modelo = PolynomialR.PR(datos, grado);  // Pasa la lista de datos en lugar de la clase Data
         

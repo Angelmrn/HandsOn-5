@@ -25,7 +25,7 @@ public class Modelo {
             System.out.println("-----Ecuacion Con valores sustituidos-----");
             System.out.println("Y = " + this.b0 + " (+) " + this.b1 + " * (X1)");
             System.out.println();
-            System.out.println("Coeficiente de error:" );
+            System.out.println("R2:" + CoeficienteErr.CalcularR2SIMPLE(Data.PR(), this.b0, this.b1));
             double val = 4;
             System.out.println("-----La ecuacion con el valor " + val + " es-----");
             System.out.println(this.b0 + (this.b1 * val));
@@ -37,6 +37,7 @@ public class Modelo {
             System.out.println("-----Ecuacion Con valores sustituidos-----");
             System.out.println("Y = " + this.b0 + " (+) " + this.b1 + " * (X1) + " + this.b2 + " * X1^2");
             System.out.println();
+            System.out.println("R2:" + CoeficienteErr.CalcularR2Cuadratico(Data.datos30, this.b0, this.b1, this.b2));
             double val = 4;
             System.out.println("-----La ecuacion con el valor " + val + " es-----");
             System.out.println(this.b0 + (this.b1 * val) + (this.b2 * val * val));
@@ -49,6 +50,7 @@ public class Modelo {
             System.out.println("-----Ecuacion Con valores sustituidos-----");
             System.out.println("Y = " + this.b0 + " + " +"("+ this.b1 + " * X1) + " +"("+ this.b2 + " * X1^2) + " + "("+this.b3 + " * X1^3)");
             System.out.println();
+            System.out.println("R2:" + CoeficienteErr.CalcularR2Cubico(Data.datos30, this.b0, this.b1, this.b2, this.b3));
             double val = 4;
             System.out.println("-----La ecuacion con el valor " + val + " es-----");
             System.out.println(this.b0 + (this.b1 * val) + (this.b2 * val * val) + (this.b3 * val * val * val));

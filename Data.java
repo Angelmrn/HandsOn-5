@@ -50,6 +50,7 @@ public class Data {
 
     //Primer segmentacion
     public static void ObtenerDatos70(){
+        datos70.clear();
         int size = Datos.size();
         int size70 = (int) (size * 0.7);
 
@@ -59,6 +60,7 @@ public class Data {
     }
    
     public static void ObtenerDatos30(){
+        datos30.clear();
         int size = Datos.size();
         int size70 = (int) (size * 0.7);
 
@@ -69,6 +71,7 @@ public class Data {
 
     //Segunda segmentacion
     public static void ObtenersegDatos30(){
+        segdatos30.clear();
         int size = Datos.size();
         int size30 = (int) (size * 0.3);
 
@@ -78,6 +81,7 @@ public class Data {
     }
 
     public static void ObtenersegDatos70(){
+        segdatos70.clear();
         int size = Datos.size();
         int size30 = (int) (size * 0.3);
 

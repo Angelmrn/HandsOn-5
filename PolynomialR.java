@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class PolynomialR {
     public static Modelo PR(ArrayList<Data> datosList, int grado) {
-        int n = datosList.size();
+        
         double[] sumasX = new double[2 * grado + 1];
         double[] sumasXY = new double[grado + 1];
 
@@ -12,7 +12,7 @@ public class PolynomialR {
             double y = datos.getY();
 
             // Sumas de potencias de x
-            double xtPot = 1;  // xt^0
+            double xtPot = 1;  
             for (int i = 0; i <= 2 * grado; i++) {
                 sumasX[i] += xtPot;
                 if (i <= grado) {
@@ -33,9 +33,6 @@ public class PolynomialR {
             }
             matrizy[i][0] = sumasXY[i];
         }
-
-        // Ahora sigue el mismo proceso que ya tienes para calcular la transpuesta, inversa, etc.
-        // Usar las matrices construidas dinámicamente (matrizx y matrizy)
 
         int filas = matrizx.length;
         int columnas = matrizx[0].length;
@@ -114,7 +111,6 @@ public class PolynomialR {
             total[i] = resultado;
         }
 
-        // Crear modelo a partir de los coeficientes calculados
         return new Modelo(total);
     }
 }
